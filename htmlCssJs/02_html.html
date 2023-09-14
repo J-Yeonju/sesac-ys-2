@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"> <!--언어 한국어는 ko 영어는 en-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 태그 수업 2</title>
+</head>
+<body>
+    <!-- 현재 위치는 "C:\Users\SBA_USER\Desktop\github\sesac-ys-2\htmlCssJs"
+        ./ham.jepg  : 현재 위치에 있는 "ham.jpg"에 접근하겠다. => htmlCssJs"
+        ../ : 한 단계 앞 위치로 이동 => sesac-ys-2
+        ../htmlCssJs : 이동 가능할까요? 존재합니다. sesac-ys-2\htmlCssJs 이런 뜻 
+        (상대경로 지정 방법)
+    -->
+    <img src="ham.jpg" alt="햄스터입니다." title="햄스터" width="300" height="300" />
+
+    <a href="https://www.naver.com/" target="_self">
+        <br />
+        링크를 어떤 이름으로 보여주고 싶은지, <br />
+        링크 주소 그대로 적어줘도 된다. <br />
+        https://www.naver.com
+    </a>
+    <br />
+    <a href="./01_html.html" target="_blank">html 파일</a>
+    <hr />
+    <h2>회원가입</h2>
+    <form>
+        이름: <input type="text" name="name" placeholder="이름을 입력하세요"/>
+        <br />
+        이메일: <input type="text" name="email" />
+        <br />
+        비밀번호: <input type="password" name="pw" />
+        <br />
+        비밀번호 확인: <input type="password" name="pw_check" />
+
+        <input type="button" value="제출"/>
+        <button>제출</button>
+        <br />
+        취미를 선택하세요.
+        <input type="checkbox" name="hobby" value="축구" /> 축구
+        <input type="checkbox" name="hobby" value="야구" /> 야구
+        <input type="checkbox" name="hobby" value="농구" /> 농구
+
+        <br />
+        성별을 선택하세요
+        <input type="radio" name="gender" /> 남성
+        <input type="radio" name="gender" /> 여성
+        <br />
+        15세 이상인가요?
+        <input type="radio" name="is_order_15" value="예"/> 예
+        <input type="radio" name="is_order_15" value="아니오"/> 아니오
+
+        <br />
+        생년월일 : <input type="date" name="birth" />
+        <br />
+        색 : <input type="color" name="color" />
+        <br />
+        range : <input type="range" name="range" min="0" max="10" step="2"/>
+        <br />
+        file : <input type="file" name="imge" />
+            <select name="select_option">
+                <optgroup label="옵션 1~2">
+                    <option value="option1">옵션 1</option>
+                    <option value="option2">옵션 2</option>
+                </optgroup>
+                <optgroup label="옵션 3~4">
+                    <option value="option1">옵션 3</option>
+                    <option value="option2">옵션 4</option>
+                </optgroup>
+                <option value="option1">옵션5</option>
+                <option value="option2">옵션6</option>
+                <option value="option3">옵션7</option>
+                <option value="option4">옵션8</option>
+            </select>
+    </form>
+
+</body>
+</html>
