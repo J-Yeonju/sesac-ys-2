@@ -1,10 +1,10 @@
-* {
+/* * {
     color: rgb(45, 45, 45);
-}
+} */
 
 /* 태그 선택자 */
 div {
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 /* 클래스 선택자 */
@@ -23,3 +23,29 @@ div {
 #list_1 {
     color: red;
 }
+
+
+
+/* 하위 선택자 */
+div .apple {
+    /* color: #920000; */
+}
+/* apple 두개를 선택하게 된다.  */
+
+
+/* 자식 선택자 */
+div > .apple {
+    color: #920000;
+}
+
+/* 인접 형제 선택자 */
+h1 + ul {
+    font-size: 20px;
+    color: blue;
+}
+
+/* 일반 형제 선택자 */
+h1 ~ ul {
+    font-size: 20px;
+}
+

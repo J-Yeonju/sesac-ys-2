@@ -1,6 +1,6 @@
 /* 20230914_실습_css맛보기 */
 
-#b {
+/* #b {
     background-color: yellow; 
     width:300px; height:100px;
 }
@@ -19,14 +19,14 @@
 #f {
     background-color: purple; 
     width:700px; height:100px;
-}
+} */
 
 
 
 
 /* 20230914_실습_기본 선택자 연습하기 */
 
-
+/* 
 * {
     color: white;
     background-color: gray;
@@ -42,4 +42,63 @@ span {
 
 .second {
     background-color: green;
+} */
+
+
+
+
+/* 20230914_실습_복합선택자 연습하기 */
+
+/* p.lion {
+    background-color: red;
+}
+
+ul > span.lion {
+    background-color: greenyellow;
+    font-weight: bolder
+}
+ul > li.lion {
+    background-color: greenyellow;
+} 
+
+ul > #tiger {
+    background-color: yellow;
+}
+
+.lion {
+    color: sienna;
+}
+
+#tiger + li {
+    background-color: skyblue;
+}
+
+ul > li.lion ~ li {
+    background-color: orange;
+} */
+
+
+
+/* 
+h1:hover {
+    color: red;
+}
+
+a:active {
+    background-color: blue;
+}
+
+input:focus {
+    background-color: orange;
+} */
+
+
+
+.stripes div:nth-child(2n+1) {
+    background-color: navy;
+    color: white;
+}
+
+.stripes div:nth-child(2n) {
+    background-color: yellow;
 }
