@@ -38,3 +38,42 @@ a:visited {
 .fruits *:not(span) {
     background-color: aqua;
 }
+
+
+/* ::before */
+div.before-el::before {
+    content: "앞!";
+}
+
+/* ::after */
+div.after-el::after {
+    content: "hot";
+    color: white;
+    font-size: 12px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+
+
+
+input[type=password] {
+    background-color: orange;
+}
+
+input[name=name] {
+    background-color: orange;
+}
+
+
+
+
+/* 자식으로 */
+.fruits-3 > .wm-3 {
+    color: blue;
+}
+
+/* 클래스로 */
+.wm-3 {
+    color: red;
+}
