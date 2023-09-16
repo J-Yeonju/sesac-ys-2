@@ -1,0 +1,45 @@
+/* 20230914_실습_css맛보기 */
+
+#b {
+    background-color: yellow; 
+    width:300px; height:100px;
+}
+#c {
+    background-color: green; 
+    width:400px; height:100px;
+}
+#d {
+    background-color: blue; 
+    width:500px; height:100px;
+}
+#e {
+    background-color: indigo; 
+    width:600px; height:100px;
+}
+#f {
+    background-color: purple; 
+    width:700px; height:100px;
+}
+
+
+
+
+/* 20230914_실습_기본 선택자 연습하기 */
+
+
+* {
+    color: white;
+    background-color: gray;
+}
+
+span {
+    background-color: red;
+}
+
+#first {
+    background-color: blue;
+}
+
+.second {
+    background-color: green;
+}
