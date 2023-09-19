@@ -1,0 +1,143 @@
+.container-1 {
+    background-color: rgb(213, 165, 165);
+    width: 500px;
+    height: 500px;
+    display: flex;
+}
+
+.item {
+    background-color: rgb(185, 213, 165);
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+}
+
+
+.container-2 {
+    background-color: rgb(213, 165, 165);
+    width: 500px;
+    height: 500px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tem {
+    background-color: rgb(185, 213, 165);
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+
+.container-3 {
+    background-color: rgb(213, 165, 165);
+    width: 500px;
+    height: 500px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.em {
+    background-color: rgb(185, 213, 165);
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+
+
+
+.container1 {
+    background-color: rgb(185, 213, 165);
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.box {
+    background-color: rgb(181, 165, 213);
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+
+}
+
+.container2 {
+    background-color: rgb(185, 213, 165);
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.container3 {
+    background-color: rgb(185, 213, 165);
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.container4 {
+    background-color: rgb(185, 213, 165);
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container5 {
+    background-color: rgb(185, 213, 165);
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+
+.container6 {
+    background-color: rgb(185, 213, 165);
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.container7 {
+    background-color: rgb(185, 213, 165);
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+}
+
+
+.container8 {
+    background-color: rgb(185, 213, 165);
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
