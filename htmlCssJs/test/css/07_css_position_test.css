@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+}
+
+.container {
+    position: relative;  
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.item-1 {
+    position: relative;
+    background-color: red;
+    left: 50px;
+    top: 30px;
+}
+
+.item-2 {
+    position: absolute;
+    background-color: yellow;
+    right: 30px;
+    bottom: 100px;
+}
+
+.item-3 {
+    position: fixed;
+    background-color: green;
+    right: 100px;
+    top: 100px;
+}
+
+
+
+/*애벌레 그리기*/
+
+.parent {
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.circle1 {
+    background-color: #9afaff;
+    top: 100px;
+    left: 200px;
+    position: relative;
+}   
+    .eye {
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .white {
+        z-index: 9;
+        background-color: white;
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        left: 30px;
+    }
+
+    .black {
+        z-index: 10;
+        background-color: black;
+        width: 15px;
+        height: 15px;
+        top: 5px;
+    }
+
+
+.circle2 {
+    background-color:  #84ff8d;
+    z-index: 2;
+    top: 130px;
+    left: 280px;
+}
+
+.circle3 {
+    background-color:  #ffeb88;
+    z-index: 3;
+    top: 170px;
+    left: 330px;
+}
+
+.circle4 {
+    background-color: #ffb680;
+    z-index: 4;
+    top: 170px;
+    left: 390px;
+}
+
+.circle5 {
+    background-color: #ff7c7c;
+    z-index: 5;
+    top: 170px; 
+    left: 450px;
+}
+
+.grass {
+    position: relative;
+    height: 100px;
+    z-index: 4;
+    top: 100px;
+    left: 250px;
+}
