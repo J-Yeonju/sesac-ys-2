@@ -1,0 +1,47 @@
+/* .box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: movetoright 3s linear 0s 6 ;
+
+}
+
+@keyframes movetoright {
+    0% {
+        left: 0px;
+        bottom: 0;
+    }
+    25% {
+        left: 200px;
+        top: 0;
+    }
+    50% {
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        left: 0px;
+        top:  0px;
+    }
+} */
+
+p {
+    position: relative;
+    animation: movetoleft 3s linear 0s;
+}
+
+@keyframes movetoleft {
+    0% {
+        left: 120%;
+        width: 300%;
+    }
+    100% {
+        left: 0%;
+        width: 100%;
+    }
+}
