@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 5;
+        let num2 = num;
+        num2 += 5;
+        console.log(num, num2);
+        
+        let arr = [1,2,3,4,5];
+        let arr2 = arr;
+        arr2.reverse()
+        console.log(arr, arr2);
+
+        var arr3 = [1,2,3,4];
+        var arr4 = arr3.slice();
+
+        // 결국 다른 곳을 보게 된다. 
+        // var arr3 = [1,2,3,4];
+        // var arr4 = [1,2,3,4];
+
+        arr4.reverse()
+        console.log(arr3, arr4);
+
+        // 기본 자료형ㅇ[서는 num과 num2는 다른 공간 
+        // arr2에 리버스를 넣어줬ㄴ느데 arr도 리버스 됨.
+        // 객체에서는 arr 과 arr2는 같은 곳을 바라보고 있다.
+        //숫자 문자열 일반적인 것 그 자체를 복사해서 새로운 공간을 만든다. 
+        // 객체는 원래값의 주소값을 전달한다. 변수의 이름 2개의 식별자가 같은 공간을 바라보고 있기 때문에 arr2를 바꾸어도 같은 곳을 보고 있는 그 공간의 값을 바꾸는 것이 된다.
+        // 하나의 공간을 arr과 arr2 두 가지 이름으로 부르는 것 , 별명 같은 것, 결국 같은 사람을 부르는 것이다.  
+
+
+
+        let date = new Date("2023-09-22");
+        console.log(date.getFullYear());
+        console.log(date.getMonth()+1);   // month는 +1을 해주어야 한다. 
+        console.log(date.getDate());
+        console.log(date.getDay());
+        console.log(date.getTime());
+        console.log(date.getHours());
+
+        let expired = new Date("2023-09-22").getTime();
+        let today = new Date().getTime();
+
+        if(expired < today) {
+            console.log("만료일이 지났어요ㅜㅜ");
+        }else {
+            console.log("사용할 수 있어요");
+        }
+
+        // year, month, day
+        // 예시) 내가 지정한 날짜에 만료일(1년 뒤... +365)을 나오게 하고 싶을 떄~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
