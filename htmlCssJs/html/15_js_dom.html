@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_dom</title>
+</head>
+<body>
+    <div id="box" class="box"> hello </div>
+    <div id="container" class="box item"> hello </div>
+    <span>hello span</span>
+
+    <input type="text" name="email" />
+
+    <div id="box2">
+        <b>hello box2</b>
+    </div>
+
+    <script>
+        // console.log(document.documentElement);
+        // console.log(document.head);
+        // console.log(document.title);
+        // console.log(document.body); // 자주 쓰임
+        // console.log(document.URL);
+        // console.log(document.domain);
+
+        let elById = document.getElementById("box")
+        console.log(elById)
+
+        let elByClass = document.getElementsByClassName("box")
+        console.log(elByClass)
+        console.log(elByClass[0])
+        console.log(elByClass[1])
+
+        let elByTag = document.getElementsByTagName("span")   //기본적으로 여러개를 선택함 elements s
+        console.log(elByTag)
+        console.log(elByTag[0])
+
+        let elByName = document.getElementsByName ("email")
+        console.log(elByName)
+
+        // 선택자를 이용하여 요소를 선택
+        let elBySelector = document.querySelector(".box") //위에서부터 발견한 하나만!
+        let elBySelectorAll = document.querySelectorAll(".box") // 발견한 모든 것!
+        console.log(elBySelector)
+        console.log(elBySelectorAll)
+
+        let elBox2 = document.getElementById("box2")
+        // let elBox2 = document.querySelector("#box2")
+
+        console.log(elBox2)  //자식까지 다 보여준다
+        console.log(elBox2.innerText) //텍스트만 보여준다
+        console.log(elBox2.innerHTML) //모든 컨텐츠를 보여준다.
+        
+        elBox2.innerText = "hello <b>lily<b>"   //위에서 쓴 내용을 아예 바꿔준다. 태그를 써도 텍스트 자체로 인식한다. 
+        elBox2.innerHTML = "hello <b>lily<b>"  //태그를 파싱해준다. 
+    </script>
+</body>
+</html>
