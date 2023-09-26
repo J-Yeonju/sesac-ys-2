@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        .container{
+            width: 600px;
+            height: 400px;
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .red {
+            background-color: red;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box orange"></div>
+        <div class="box yellow"></div>
+
+    </div>
+
+    <input type="text" name="name" id="input" value="yeonju"/>
+    <button type="button" onclick="useVal()">vla() 사용하기</button>
+    <button type="button" onclick="useAttr()">attr() 사용하기</button>
+    <br />
+
+    <span id="span1">hello</span>
+    <button type="button" onclick="useCss()">css 사용하기</button>
+    <button type="button" onclick="useText()">text() 사용하기</button>
+    <script>
+
+
+        // $("선택자").동작함수();
+        // document.get~~~ / document.querySelector~~~
+        // 요소  .innerHTML / append()   제이쿼리는 다 함수 속성이 없다. 
+
+
+        function useVal() {
+            // id 가 input인 태그를 선택하여, 그 input의 value를 가져오는 코드
+            // 앞에 배열이여도 동작함수가 알아서 적용시켜줌. 무조건 배열로 선택
+            const value = $("#input").val();
+            // const value = document.getElementById("input").value;
+            console.log(value);
+
+            // id 가 input인 태그를 선택하여, 그 input의 value를 설정하는 코드
+            $("#input").val("설정하고 싶은 값");
+            // document.getElementById("input").value = '설정하고 싶은 값';
+        }
+
+        function useCss() {
+            // .css() : style을 변경
+            $("#span1").css("color", "blue");
+        }
+
+        function useAttr() {
+            $("#input").val("");  //기본값 초기화 (위에 값을 넣어줘서 기본값이 존재하는 상태이므로)
+            $("#input").attr("placeholder", "이름을 입력하세요");
+            // js :  setAttributes()
+        }
+
+        function useText() {
+            // innerText   태그인식 안 함
+            $("#span1").text("helloooooooo");
+
+            // innerHTML   태그 인식 함
+            $("#span1").html("helloooooooo  <b>yeonju</b>");
+
+        }
+
+        function useAppend
+
+    </script>
+</body>
+</html>
