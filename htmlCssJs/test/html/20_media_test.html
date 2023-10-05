@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 실습</title>
+
+
+    <style>
+/*
+        @media screen and (min-width: 500px){
+            body {
+                background-color: skyblue;
+            } 
+        }
+
+        @media screen and (max-width: 300px){
+            body {
+                background-color: orange;
+            } 
+        }
+
+        @media screen and (max-height: 300px){
+            p {
+                font-family: 'Courier New', Courier, monospace;
+            }
+        }
+
+        @media screen and (min-height: 500px){
+            p {
+                background-color: green;
+            }
+        }
+*/
+
+        .container {
+            width: 500px;
+            height: 500px;
+            display: flex;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: black;
+            margin: 10px;
+            border-radius: 5%;
+        }
+
+        @media screen and (max-width: 700px){
+            .box {
+                background-color: skyblue;
+            }
+            .container {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+</body>
+</html>

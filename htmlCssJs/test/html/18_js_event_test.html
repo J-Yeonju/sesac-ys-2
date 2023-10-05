@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <div>
+        <p>날짜 : <input type="text" id="date"> </p> 
+        <p>내용 : <input type="text" id="content"> </p>
+        <button type="button" onclick="addSchedule()">작성</button>
+    </div>
+
+
+    <table 
+    width="700px"
+    height="800px"
+    align="center"
+    >
+    <h4 style="color: green;"align="center">2022년 7월</h4>
+        <tbody>
+            <tr align="center">
+                <td style="color: red;">日</td>
+                <td>月</td>
+                <td>火</td>
+                <td>水</td>
+                <td>木</td>
+                <td>金</td>
+                <td style="color: blue;">土</td>
+            </tr>
+            <tr align="center">
+                <td style="color: red;"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td style="color: blue;">2</td>
+            </tr>
+            <tr align="center">
+                <td style="color: red;">3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td style="color: blue;">9</td>
+            </tr>
+            <tr align="center">
+                <td style="color: red;">10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td style="color: blue;">16</td>
+            </tr>
+            <tr align="center">
+                <td style="color: red;">17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td style="color: blue;">23</td>
+            </tr>
+            <tr align="center">
+                <td style="color: red;">24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td style="color: blue;">30</td>
+            </tr>
+            <tr align="center">
+                <td style="color: red;">31</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="color: blue;"></td>
+                </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+    
+        let date;
+        $("td").on("click", function() {     // td 태그에 클릭 이벤트 걸기
+            console.log(this);              // 클릭한 td요소가 담긴다.
+            $("#date").val(this.innerText)  // 2) ~ 4) 선택된 input태그의 value로 2)에서 가져가기
+            // 혹은 $("#date").val($(this).text())
+            date = this;                    // 2-4를 해결하기 위한 키포인트
+        })
+
+        function addSchedule() {            // 2) 작성 버튼에 걸릴 함수를 정의한다. 
+            const content = $("#content").val() // 3) 내용 input의 VALUE를 가져온다.
+
+            $(date).append(`content`)         // 내가 원하는 td태그 선택  
+            // date에 담겨있는 td 태그에 내용 추가 
+           
+        }
+
+
+    </script>
+
+</body>
+</html>

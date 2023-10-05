@@ -1,0 +1,70 @@
+:root {
+    /* --main-color: */
+    --color-main: navy;
+    --height-header-lg: 85px;
+}
+
+
+
+.container {
+    margin-top: var(--height-header-lg);
+    width: 500px;
+    height: 500px;
+    background-color: var(--color-main);
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+
+@media screen and (max-width: 500px) {
+    .container{
+        flex-direction: column;
+        /* display: block; */   /*justify-content: center; 가 무효 */
+    }
+}
+
+/* @media 미디어유형 and (크기 규칙) */
+
+@media print {
+    .container {
+        background-color: blue;
+    } 
+    /*여기 적은 것만 덮어 쓰는 것*/
+}
+
+
+
+/* min-width / max-width 둘 중 하나로 통일해서 사용한다  */
+
+@media screen and (min-width: 700px){
+    /* 700px 이상일 경우 아래 코드 실행*/
+    /* 작은 화면을 기준으로 하다가 커졌을 때 어떻게 변경할지~ */
+    .container {
+        background-color: blue;
+    } 
+}
+
+@media screen and (max-width: 700px){
+    /* 700px 이하일 경우 아래 코드 실행*/
+    .yellow {
+        background-color: darkgoldenrod;
+    } 
+}
+
