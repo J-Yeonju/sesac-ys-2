@@ -1,0 +1,122 @@
+h1 {
+    text-align: center;
+    color: olivedrab;
+}
+
+
+
+header {
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+header ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+header li {
+    border: 1px solid blue;
+    border-radius: 10px 10px 0 0;
+    width: 60px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+
+
+.monthWrapper {
+    background-color: #fff;
+    border: 1px solid green;
+    /* overflow: auto; */
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.monthTitle {
+    color: blue;
+    font-size: 200%;
+    font-weight: 800;
+    text-align: center;
+    margin: 10px;
+}
+
+table {
+    border: 1px solid green;
+    width: 700px;
+    text-align: center;
+    margin: auto;
+  }
+
+  tr {
+    font-size: 20px;
+  }
+
+  td {
+    border: 1px solid red;
+    font-size: 18px;
+    cursor: pointer;
+    /* width: calc(100% / 7); */
+    width: 100px;
+    height: 80px;
+    box-sizing:border-box;
+    vertical-align: top;
+  }
+
+  td div {
+    color: blueviolet;
+    font-size: 10px;
+  }
+
+  tr > td:first-child,
+  tr > th:first-child {
+    color: red;
+  }
+
+  tr > td:last-child,
+  tr > th:last-child {
+    color: blue;
+  }
+
+
+
+.writeBox {
+    border: 1px solid green;
+    width: 700px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.writeBox .writeDate {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgb(233, 233, 233);
+}
+
+.writeBox .writeDate .div {
+    border: 1px solid red;
+}
+
+.writeBox .writeTodo {
+    width: 500px;
+    height: 100px;
+}
+
+.writeBox .writeButt {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: red;
+}

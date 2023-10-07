@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./alone_test.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <h1> 다이어리 </h1>
+
+    <div class="monthWrapper">
+      
+      <header class="header1">
+        <ul class="menus">
+          <li>1월</li>
+          <li>2월</li>
+          <li>3월</li>
+          <li>4월</li>
+          <li>5월</li>
+          <li>6월</li>
+          <li>7월</li>
+          <li>8월</li>
+          <li>9월</li>
+          <li>10월</li>
+          <li>11월</li>
+          <li>12월</li>
+        </ul>
+      </header>
+
+      <div class="monthTitle">10월</div>
+
+      <table>
+        <tr>
+          <th>日</th>
+          <th>月</th>
+          <th>火</th>
+          <th>水</th>
+          <th>木</th>
+          <th>金</th>
+          <th>土</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+
+        <tr>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+        </tr>
+
+        <tr>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+        </tr>
+
+        <tr>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+        </tr>
+
+        <tr>
+          <td>29</td>
+          <td>30</td>
+          <td>31</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="writeBox">
+        <input class="writeDate" type="text" name="date" placeholder="날짜" readonly />
+        <input class="writeTodo" type="text" name="todo" placeholder="할 일" />
+        <button class="writeButt" type="button" onclick="addSchedule()">작성</button>
+      </div>
+
+
+    </div>
+    <script>
+      let dateEl;
+
+      $("td").on("click", function () {
+        const date = $(this).text();
+        $("input[name=date]").val(date);
+        dateEl = this;
+        console.log(dateEl);
+      });
+
+      function addSchedule() {
+        const todo = $("input[name=todo]").val();
+        $(dateEl).append(`<div>${todo}</div>`);
+      }
+    </script>
+  </body>
+</html>

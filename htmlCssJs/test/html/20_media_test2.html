@@ -34,35 +34,58 @@
 
       /* 768px 보다 클때의 header */
       header .inner {
+        position: relative;
         background-color: lightblue;
         height: 100%;
         display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       /* LOGO */
       header .inner .logo {
         color: white;
         font-size: 30px;
+        position: absolute;
+        left: 50px;
       }
 
       header .inner .menu {
         display: flex;
-        justify-content: center;
       }
 
       header .inner .menu li {
-        margin: 10px;
+        margin: 0 15px;
+        font-weight: 800;
+        cursor: pointer;
       }
 
       /* 미디어 쿼리 작성 768px 이하일 때  */
+      @media screen and (max-width: 768) {
+        header {
+        height: var(--nav-height-sm);
+        }
 
+        header .inner .menu {
+        display: block;
+        text-align: center;
+        background-color: aliceblue;
+        }
 
+        header .inner {
+        display: block;
+        }
 
+        header .inner .logo {
+        position: static;     /*없애고 싶으면 디폴트값을 찾자*/
+        height: var(--nav-height-sm);  /* or 100%*/
+        line-height: var(--nav-height-sm);
+        text-align: center;   /*가로 정렬은 싶다 인라인요소라고 생각*/
+        }
 
-
-
-
-
+        header .inner .menu li {
+          padding: 10px 15px;
+        }
     </style>
   </head>
   <body>
