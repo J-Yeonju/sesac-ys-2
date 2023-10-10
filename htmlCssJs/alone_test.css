@@ -105,7 +105,7 @@ table {
     background-color: rgb(233, 233, 233);
 }
 
-.writeBox .writeDate .div {
+.writeBox .writeDate  {
     border: 1px solid red;
 }
 
