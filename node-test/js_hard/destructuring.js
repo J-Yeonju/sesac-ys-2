@@ -61,6 +61,7 @@ console.log( "arr3", arr3);
 
 // ,,,[1,2,3,4,5] => 1,2,3,4,5
 // 배열로 묶었던 것을 풀어준다. 
+// 배열을 해제시키고 전개시킨다
 // const hello = [..."hello"]
 // hello = ["h", "e", "l", "l", "o"]
 // console.log("hello", hello);
