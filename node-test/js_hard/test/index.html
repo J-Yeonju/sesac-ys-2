@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 1초에 한 번씩 바뀌는 코드
+        function changeColor(color) {
+            return new Promise(function(resolve) {      //resolve를 안 쓰는 팬딩 상태(안 끝남)
+                setTimeout(function () {
+                    document.body.style.background = color
+                    resolve()
+                }, 1000)
+            })
+        }
+
+        // 더 실용적인 코드
+        changeColor("red").then(()=>{
+            return changeColor("orange")
+        }).then(()=>{
+            return changeColor("yellow")
+        }).then(()=>{
+            return changeColor("green")
+        })
+        .then(()=>{
+            changeColor("blue")
+        })
+
+
+        // async사용하는 코드
+        // async function exec(){
+        //     await changeColor("red")    //실행 - 1초기다림 - resolve 만남 - 바뀜 ~~
+        //     await changeColor("orange")
+        //     await changeColor("yellow")
+        //     await changeColor("green")
+        //     await changeColor("blue")
+        // }
+
+        // exec()
+
+
+        // 무한반복 zhem 
+        async function exec() {
+            const color = ["red", "orange", "yellow", "green", "blue" ]
+            for(let i = 0; i<colors.length; i++) {
+                await changeColor(color[i]);
+                if (i == color.length - 1) i = -1;   // 1이 아닌 -1
+            }
+
+
+            // await changeColor("red")    
+            // await changeColor("orange")
+            // await changeColor("yellow")
+            // await changeColor("green")
+            // await changeColor("blue")
+        }
+
+        exec()
+
+    </script>
+</body>
+</html>
