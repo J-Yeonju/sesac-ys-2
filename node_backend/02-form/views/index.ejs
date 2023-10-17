@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>로그인</h1>
+    <!--
+    form 전송은 클라이언트가 서버로 데이터를 보낼 때 보내는 방법 중 하나
+    action="요청을 보낼 주소(제 서버에 보낸다는 가정 하에 도메인을 뗀 나머지 주소) 실제 존재하는 주소를 적어야 한다. " 
+    ex) localhost:8000/get/test 이라는 곳으로 보내고 싶다면 action="/get/test"
+    method="get 혹은 host (어떤 방식의 요청을 사용할 지)"
+    -->
+    <form action="/get" method="get" target="_blank" name="login">
+        <fieldset>
+            <input type="text" name="id" />
+            <input type="password" name="pw" />
+            <!--                                                        for과 id를 일치 시키면 글자를 눌러도 선택이 된다. -->
+            <input type="radio" name="gender" value="남자" id="men" /> <label for="men">남자</label>   
+            <input type="radio" name="gender" value="여자" id="women" /> <label for="women">여자</label> 
+            <!-- button type submit인 경우, 버튼을 감싸고 있는 form 태그의 정보에 맞게 폼을 제출함. -->
+        
+            <button type="submit">제출</button>   
+        </fieldset>
+    </form>
+
+    <script>
+        // 그 안의 속성값을 확인하고 싶다.
+        console.dir(document.forms["login"]);
+        // console.log(document.forms["login"]);
+        
+    </script>
+
+    <h1>회원가입 GET 요청</h1>
+    <form action="/get" method="get" target="_blank" name="new">
+        <input type="text" name="id" />
+        <input type="password" name="pw" />
+        <input type="text" name="name" />
+        <input type="text" name="email" />
+        <button type="submit">제출</button>   
+    </form>
+
+    <h1>회원가입 post 요청</h1>
+    <form action="/post/ver2" method="post" >
+        <input type="text" name="id" pattern="^([a-za-z0-9가-힣]){4,12}$" title="소문자, 대문자, 한글, 숫자로 조합된 4~12자리 문자열로 입력" required/>
+        <input type="password" name="pw" oninput="validCheckPw(this)"/> <!--실행시키고 싶은 함수니까 실행() 넣어주기-->
+        <div id="error-pw"></div>
+        <input type="text" name="name" minlength="4" required /> <!--기본 제공 유효성 검사-->
+        <input type="number" min="5" max="10" placeholder="숫자" >
+        <input type="text" name="email" />
+        <button type="submit">제출</button>   
+    </form>
+
+    <script>
+        function validCheckPw(el) {
+            const regexPw = /^([a-z0-9]){8,12}$/          //정규표현식은 /슬래쉬 사이에/ 입력해준다. 
+            const value = el.value
+            const error = document.getElementById("error-pw")
+            // regexPw.test("검사하고 싶은 값") =>true or false return
+            if (regexPw.test(value)) {
+                console.log("정규식 일치");
+            } else {
+                error.innerHTML = "소문자, 숫자로 조합된 8~12자리로 입력"
+                console.log("정규식 불일치");
+            }
+        }
+    </script>
+</body>
+</html>
