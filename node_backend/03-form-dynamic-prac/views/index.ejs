@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적 폼 전송 실습</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>get으로 정보 받기</h1>
+    <form action="/get" method="get" target="_blank" name="new">
+        <p>이름<input type="text" name="name" /></p>
+        <fieldset >
+            <legend>성별</legend>
+            <input type="radio" name="gender" value="남자" id="men" /> <label for="men">남자</label>   
+            <input type="radio" name="gender" value="여자" id="women" /> <label for="women">여자</label> 
+        </fieldset>
+        <fieldset>
+            <legend>생년월일</legend>
+            <select name="year">
+                <% for(let i=2023; i>=1970; i--){  %>
+                    <option value="<%= i %>"> <%= i %></option>
+                <% } %>
+            </select>년
+            <select name="month">
+                <% for(let i=1; i<=12; i++){  %>
+                    <option value="<%= i %>"> <%= i %></option>
+                <% } %>
+            </select>월
+            <select name="day">
+                <% for(let i=1; i<=31; i++){  %>
+                    <option value="<%= i %>"> <%= i %></option>
+                <% } %>
+            </select>일
+        </fieldset>
+        <fieldset>
+            <legend>관심사</legend>
+            <input type="checkbox" name="like" value="여행" id="travel" /> <label for="travel">여행</label>   
+            <input type="checkbox" name="like" value="패션" id="fashion" /> <label for="fashion">패션</label>   
+            <input type="checkbox" name="like" value="음식" id="food" /> <label for="food">음식</label>   
+        </fieldset>
+
+        <button type="button" onclick="axiosGet()">axios get 회원가입</button>
+
+        <h3 id="result"></h3>
+
+        <script>
+        function getData() {
+            const form = document.forms["new"];
+            
+            if(!form.checkValidity()) {          
+                form.reportValidity();           
+                return false;                             
+            }
+
+            const data = {
+                name: form.name.value,
+                gender: form.gender.value,
+                year: form.year.value,
+                month: form.month.value,
+                day: form.day.value,
+                like: form.like.value,
+            }
+
+            return data;
+        }
+
+            
+        async function axiosGet() {
+            const data = getData();
+            if (!data) return;
+            console.log(data);
+
+            const res = await axios({
+                method: "GET",
+                url: "/axios",
+                data: data, 
+            })
+
+            console.log("res.data", res.data);
+            $("#result").html(`axios get 요청 성공 ${res.data.name}님 환영합니다`)
+
+        }
+        </script>
+    </form>
+</body>
+</html>
