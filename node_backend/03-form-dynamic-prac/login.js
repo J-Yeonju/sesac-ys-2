@@ -27,6 +27,11 @@ app.post("/axios", function (req, res) {
         res.send(data);
 })
 
+app.post("/login", function (req, res) {
+    const id = "yeonju";
+    const pw = "12345";
+    console.log();
+})
 
 app.listen(PORT, function(){
     console.log(`server Open: ${PORT}`);

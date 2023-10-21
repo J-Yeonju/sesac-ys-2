@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>axios post 로그인</title>
+    <!--!!!!!!axios 불러오기!!!!!!-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
@@ -14,6 +15,7 @@
         <p>비번<input type="text" name="pw" /></p>
 
         <button type="button" onclick="axiosPost()">axios post 회원가입</button>
+        <!--버튼의 기본 타입은 submit이니까 타입 지정 꼭 button으로!!-->
 
         <h3 id="message"></h3>
 
@@ -32,7 +34,7 @@
                 const res = await axios({
                     method: "POST",
                     url: "/axios",
-                    data: data,
+                    params: data,
                 })
 
                 if (res.data == "success") {
@@ -44,8 +46,24 @@
                             "color":"red"
                     });
             }
-
         </script>
+
+        <h2>로그인</h2>
+        <form name="login">
+            <fieldset>
+                <legend>ID</legend>
+                <input type="text" name="userid" />
+            </fieldset>
+            <fieldset>
+                <legend>password</legend>
+                <input type="password" name="userpw">
+            </fieldset>
+
+            <button type="button" onclick="clickLogin()">로그인</button>
+
+            
+        </form>
+
 
     </form>
 

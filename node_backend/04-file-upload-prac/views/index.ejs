@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 파일 업로드</title>
+</head>
+<body>
+    <h4>파일 업로드 실습</h4>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        아이디 <input type="text" name="id" />
+        <br />
+    	비밀번호 <input type="password" name="pw" />
+        <br />
+        이름 <input type="text" name="name" />
+        <br />
+        나이 <input type="text" name="age" />
+        <br />
+        <input type="file" name="userfile">
+        <br /> <br />
+        <button type="submit">회원가입</button>
+        <button type="button" onclick="">(동적 폼 전송)회원가입</button>
+    </form>
+
+
+</body>
+</html>
