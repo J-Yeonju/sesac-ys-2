@@ -5,7 +5,7 @@ exports.getUser = () => {
   //   {id: "lily", pw: "12345"}
   let users = 
 `spretics//12341234//코딩온
-codee//4321//코디
+yeonju//4321//연주
 lily//1234//릴리`;
 
   usersArr = users.split("\n")
