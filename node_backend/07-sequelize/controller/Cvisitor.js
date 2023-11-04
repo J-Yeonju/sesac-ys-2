@@ -1,4 +1,4 @@
-const {Visitor} = require("../model")
+const { User } = require("../model")
 // visitor 객체가 필요. 객체분해해서 가져온다. 
 
 exports.home = (req, res) => {

@@ -2,7 +2,7 @@ const mysql = require("mysql");
 const cnn = mysql.createConnection({
     host: 'localhost',
     user: 'user',
-    password: '',
+    password: '1234qwer$',
     database: 'db_mvc_prac'
 });
 

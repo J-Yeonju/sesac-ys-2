@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+        }
+
+        nav {
+          background-color: gainsboro;
+          color: #fff;
+        }
+
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+        }
+
+        .logo {
+          text-decoration: none;
+          font-size: 24px;
+          color: #fff;
+        }
+
+        .nav-links {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+        }
+
+        .nav-links li {
+          margin: 0 10px;
+        }
+
+        .nav-links a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+        }
+
+        .nav-links a:hover {
+          text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+          <a class="logo">연주</a>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="user-status">login</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="result">로그인 하세요ㅡㅡ</div>
+
+
+      <script>
+        axios({
+            method: 'get',
+            url: "/"
+        }).then((result) => {
+            const userStatus = document.querySelector(".user-status");
+            const success = document.querySelector(".result");
+            if ('<%=user%>') {
+                userStatus.innerHTML = "logout"
+                success.innerHTML = `<span><%=user%><span>님 안녕하세요`
+            }else {
+                success.innerHTML = `로그인 하세요--`
+            }
+
+        })
+      </script>
+</body>
+</html>
