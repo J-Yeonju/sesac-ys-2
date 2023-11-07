@@ -11,13 +11,17 @@ const dotenv = require("dotenv");
 // dotenv.config(); 
 //index.js와 같은 위치에 있는 .env파일을 불러와서 환경변수로 사용할 수 있게끔 함.
 dotenv.config({ path: path.join(_dirname, "./config/envs/.env")});
+dotenv.config({
+    path: path.join(__dirname, `./config/envs/${process.env.NODE_ENV}.env`),
+});
 
-console.log("test var: ", process.env.TEST_VAR);
+console.log("password: ", process.env.PASSWORD);
 
 app.get("/", function (req, res) {
   res.send("helllo");
 });
 
 app.listen(process.env.PORT, function () {
-  console.log(`Sever Open: ${process.env.PORT}`);
+  console.log(`Sever Open: ${process.env.PORT}`); 
 });
+  
