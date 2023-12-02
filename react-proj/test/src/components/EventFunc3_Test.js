@@ -43,7 +43,7 @@ function EventFunc3_Test() {
             </div> 
 
             <div>
-                <img style={{width: 200, height: 200}}  src={img}></img>
+                <img style={{width: 200, height: 200}}  src={img} />
             </div>
 
             <div
