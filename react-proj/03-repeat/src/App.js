@@ -10,7 +10,6 @@ function App() {
   return (
     <div >
       <ListMap />
-
       <ListMap_Prac />
 
       <br />

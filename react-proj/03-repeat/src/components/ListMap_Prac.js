@@ -16,7 +16,8 @@ function ListMap_Prac() {
             email: email,
         };
         const newInfo = Info.concat(newObj);
-    
+        console.log();
+
         setInfo(newInfo);
         setName("");
         setEmail("");
@@ -69,6 +70,7 @@ function ListMap_Prac() {
             <tbody>
                 {Info.map((value) => {
                     <tr key={value.name} onDoubleClick={() => deleteInfo(value.name)}>
+                        <td>{value.name}</td>
                         <td>{value.name}</td>
                         <td>{value.email}</td>
                     </tr>
