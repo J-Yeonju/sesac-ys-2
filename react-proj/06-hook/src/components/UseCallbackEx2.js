@@ -31,3 +31,7 @@ export default function UseCallbackEx2({ postId }) {
     </>
   );
 }
+
+// useMemo vs UseCallback
+// useMemo : 특정 값을 기억하여, 불필요한 연산을 방지 
+// useCallback : 특정 함수를 기억하여, 불필요한 재선언을 방지 
