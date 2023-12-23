@@ -1,7 +1,7 @@
 .chat-container {
   width: 320px;
   min-height: 500px;
-  background-color: rgb(203, 191, 255);
+  background-color: rgb(195, 245, 134);
   padding: 10px 15px 0;
 }
 
@@ -17,6 +17,7 @@
 .chat-container .my-chat {
   text-align: right;
 }
+
 .my-chat .content {
   background-color: rgb(255, 255, 170);
 }
@@ -44,3 +45,5 @@
 .input-container > input {
   flex-grow: 1;
 }
+
+

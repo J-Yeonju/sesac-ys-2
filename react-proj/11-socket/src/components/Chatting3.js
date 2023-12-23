@@ -12,6 +12,27 @@ export default function Chatting3() {
   const [userId, setUserId] = useState(null);
   const [userList, setUserList] = useState({});
   const [dmTo, setDmTo] = useState("all");
+  const [chatRooms, setChatRooms] = useState([]);
+  const [showChatRooms, setShowChatRooms] = useState(false);
+  const [nickname, setNickname] = useState('');
+
+  const fetchChatRooms = () => {
+    const fetchedChatRooms = [
+      { id: 1, name: '채팅방 1' },
+      { id: 2, name: '채팅방 2' },
+      { id: 3, name: '채팅방 3' },
+    ];
+    setChatRooms(fetchedChatRooms);
+    setShowChatRooms(true);
+  };
+
+  useEffect(() => {
+    fetchChatRooms();
+  }, []); 
+
+  const handleNicknameSubmit = () => {
+    fetchChatRooms(); 
+  };
 
   const initSocketConnect = () => {
     console.log("connected", socket.connected);
@@ -90,6 +111,9 @@ export default function Chatting3() {
     initSocketConnect();
     socket.emit("entry", { userId: userIdInput });
   };
+
+
+
   return (
     <>
       <h3>실습 4, 5번</h3>
@@ -121,16 +145,41 @@ export default function Chatting3() {
           </div>
         </>
       ) : (
-        <>
-          <div className="input-container">
-            <input
-              type="text"
-              value={userIdInput}
-              onChange={(e) => setUserIdInput(e.target.value)}
-            />
-            <button onClick={entryChat}>입장</button>
+        // <>
+        //   <div className="input-container">
+        //     <input
+        //       type="text"
+        //       value={userIdInput}
+        //       onChange={(e) => setUserIdInput(e.target.value)}
+        //     />
+        //     <button onClick={entryChat}>입장</button>
+        //   </div>
+        // </>
+
+        <div>
+        <h3>닉네임을 입력하세요</h3>
+        <input
+          type="text"
+          value={nickname}
+          onChange={(e) => setNickname(e.target.value)}
+          placeholder="닉네임을 입력하세요"
+        />
+        <button onClick={handleNicknameSubmit}>입장</button>
+  
+        {showChatRooms && (
+          <div>
+            <h3>채팅방 목록</h3>
+            <ul>
+              {chatRooms.map((room) => (
+                <li key={room.id}>
+                  <a href={`/chat/${room.id}`}>{room.name}</a>
+                </li>
+              ))}
+            </ul>
           </div>
-        </>
+        )}
+      </div>
+
       )}
     </>
   );
